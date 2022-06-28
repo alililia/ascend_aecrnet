@@ -151,37 +151,6 @@ For example:
 bash run_eval_ascend.sh ./dataset ckpt/aecrnet_id_1.ckpt
 ```
 
-## [Model Description](#contents)
-
-### Training Performance
-
-We use Depth Resnet Generator on Ascend and Resnet Generator on .
-
-| Parameters                 | single                                          |
-| -------------------------- | -------------------------------------------------- |
-| Model Version              | AECRNet                                            |
-| Resource                   | /TITAN RTX                                      |
-| MindSpore Version          | 1.5.0-rc1                                          |
-| Dataset                    | RESIDE                                             |
-| Training Parameters        | epoch=300, batch_size=16, lr=0.0001, neg_num=4     |
-| Optimizer                  | Adam                                               |
-| Loss Function              | L1 Loss + 20 * Contrastive Loss                    |
-| outputs                    | dehazed images                                     |
-| Speed                      | 1pc(): 1,194 ms/step                            |
-| Total time                 | 1pc(): 86.97h;                                  |
-| Checkpoint for Fine tuning | 9.97M (.ckpt file)                                 |
-
-### Evaluation Performance
-
-| Parameters          |                          |
-| ------------------- | --------------------------- |
-| Model Version       | AECRNet                     |
-| Resource            | /TITAN RTX               |
-| MindSpore Version   | 1.5.0-rc1                   |
-| Dataset             | Dense-Haze                  |
-| batch_size          | 1                           |
-| outputs             | dehazed images              |
-| SSIM                | 0.4898                      |
 
 # [ModelZoo Homepage](#contents)
 
